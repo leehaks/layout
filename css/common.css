@@ -1,0 +1,166 @@
+/* flex 값 */
+
+.flex { 
+    display: flex; 
+    display: -ms-flexbox; 
+}
+
+.flex-row { 
+    flex-direction: row; 
+    -ms-flex-direction: row; 
+}
+.flex-col { 
+    flex-direction: column; 
+    -ms-flex-direction: column; 
+}
+
+.justify-between { 
+    justify-content: space-between; 
+    -ms-flex-pack: justify; 
+}
+
+.flex-wrap { 
+    flex-wrap: wrap; 
+    -ms-flex-wrap: wrap; 
+}
+
+.items-start { 
+    align-items: flex-start; 
+    -ms-flex-align: start; 
+}
+.items-center { 
+    align-items: center; 
+    -ms-flex-align: center; 
+}
+.items-end { 
+    align-items: flex-end; 
+    -ms-flex-align: end; 
+}
+.justify-start { 
+    justify-content: flex-start;
+    -ms-flex-pack: start; 
+}
+.justify-center { 
+    justify-content: center;
+    -ms-flex-pack: center; 
+}
+.justify-end { 
+    justify-content: flex-end; 
+    -ms-flex-pack: end; 
+}
+
+.flex1 { flex: 1; -ms-flex: 1 1 0; }
+.flex2 { flex: 2; -ms-flex: 2 1 0; }
+.flex3 { flex: 3; -ms-flex: 3 1 0; }
+.flex4 { flex: 4; -ms-flex: 4 1 0; }
+.flex5 { flex: 5; -ms-flex: 5 1 0; }
+.flex6 { flex: 6; -ms-flex: 6 1 0; }
+.flex7 { flex: 7; -ms-flex: 7 1 0; }
+.flex8 { flex: 8; -ms-flex: 8 1 0; }
+.flex9 { flex: 9; -ms-flex: 9 1 0; }
+.flex10 { flex: 10; -ms-flex: 10 1 0; }
+
+.flex-none { flex: none; -ms-flex: 0 0 auto; }
+.flex-auto { flex: auto; -ms-flex: 1 1 auto; }
+
+/* margin, padding 값 */
+
+.m0 { margin: 0 !important }
+.p0 { padding: 0 !important } 
+
+.m5 { margin: .5rem; }
+.m10 { margin: 1rem; }
+.m15 { margin: 1.5rem; }
+.m20 { margin: 2rem; }
+
+.p5 { padding: .5rem; }
+.p10 { padding: 1rem; }
+.p15 { padding: 1.5rem; }
+.p20 { padding: 2rem; }
+
+.ml2 { margin-left: .2rem; }
+.ml5 { margin-left: .5rem; }
+.ml10 { margin-left: 1rem; }
+.ml15 { margin-left: 1.5rem; }
+.ml20 { margin-left: 2rem; }
+
+.mr2 {margin-right: .2rem; }
+.mr5 { margin-right: .5rem; }
+.mr10 { margin-right: 1rem; }
+.mr15 { margin-right: 1.5rem; }
+.mr20 { margin-right: 2rem; }
+
+.mt5 { margin-top: .5rem; }
+.mt10 { margin-top: 1rem; }
+.mt15 { margin-top: 1.5rem; }
+.mt20 { margin-top: 2rem; }
+
+.mb5 { margin-bottom: .5rem; }
+.mb10 { margin-bottom: 1rem; }
+.mb15 { margin-bottom: 1.5rem; }
+.mb20 { margin-bottom: 2rem; }
+
+.m-auto { margin: auto }
+.mt-auto { margin-top: auto; }
+.mr-auto { margin-right: auto; }
+.mb-auto { margin-bottom: auto; }
+.ml-auto { margin-left: auto; }
+
+.pl5 { padding-left: .5rem; }
+.pl10 { padding-left: 1rem; }
+.pl15 { padding-left: 1.5rem; }
+.pl20 { padding-left: 2rem; }
+
+.pr5 { padding-right: .5rem; }
+.pr10 { padding-right: 1rem; }
+.pr15 { padding-right: 1.5rem; }
+.pr20 { padding-right: 2rem; }
+
+.pt5 { padding-top: .5rem; }
+.pt10 { padding-top: 1rem; }
+.pt15 { padding-top: 1.5rem; }
+.pt20 { padding-top: 2rem; }
+
+.pb5 { padding-bottom: .5rem; }
+.pb10 { padding-bottom: 1rem; }
+.pb15 { padding-bottom: 1.5rem; }
+.pb20 { padding-bottom: 2rem; }
+
+/* display 값 */
+
+.inline-block { display: inline-block; }
+.block { display: block; }
+.hidden { display: none; }
+
+/* overflow 값 */
+
+.overflow-x-auto { overflow-x: auto; }
+.overflow-y-auto { overflow-y: auto; }
+.overflow-hidden { overflow: hidden; }
+
+/* img 값 */
+
+img { max-width: 100%; }
+
+/* position */
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+/* width, height */
+
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+
+/* border */
+
+.border { border: 1px solid #e2e5ec; }
+.border-t { border-top: 1px solid #e2e5ec; }
+.border-r { border-right: 1px solid #e2e5ec; }
+.border-b { border-bottom: 1px solid #e2e5ec; }
+.border-l { border-left: 1px solid #e2e5ec; }
+
+.text-sm { font-size: 80%; }
+.text-xs { font-size: 70%; }
