@@ -1,5 +1,39 @@
 window.onload = function() {    
     
+    function includeHTML(callback) { 
+
+        let z, i, elmnt, file, xhr; 
+
+        z = document.querySelectorAll('.page'); 
+
+        for( i=0; i<z.length; i++){
+            elmnt = z[i]; 
+            file = elmnt.getAttribute('data-link'); 
+            if(file){
+                xhr = new XMLHttpRequest(); 
+                xhr.onreadystatechange = function() { 
+                    if(this.readyState == 4) { 
+                        if(this.status == 200) { elmnt.innerHTML = this.responseText }
+                        if(this.status == 404) { elmnt.innerHTML = 'Page not Found.'}
+                        elmnt.removeAttribute('include-html'); 
+                        includeHTML(callback); 
+                    }
+                }
+                xhr.open('GET', file, true);
+                xhr.send(); 
+
+                return; 
+            }
+        }
+
+        setTimeout( function(){
+            callback();
+        }, 0);
+
+    }
+
+    // includeHTML(); 
+
     // function uuid() { 
     //     function numId() { 
     //         return ((1+ Math.random()) * 0x10000 | 0).toString(16).substring(1); 
@@ -178,8 +212,6 @@ window.onload = function() {
                         };
                     };
                 }, 500 ); 
-
-                
             });
         };
     }
@@ -190,7 +222,7 @@ window.onload = function() {
 
         side = document.querySelector('aside'), 
         section = document.querySelector('section#container'),
-        menuBtn = document.querySelectorAll('header .header-menu a'); 
+        menuBtn = document.querySelectorAll('header .header-menu a:not(.no-link)'); 
 
         document.querySelector('.side-toggle-btn')
         .addEventListener('click', function(evt) {
@@ -291,4 +323,61 @@ window.onload = function() {
 
     slide(); 
 
+    function dropMenu() { 
+      
+        let dropOnBtn = document.querySelectorAll('button.btn-drop')
+
+        for(let i=0; i<dropOnBtn.length; i++){
+            dropOnBtn[i].addEventListener('click', function(e){
+                e.preventDefault(); 
+
+                target = this.getAttribute('data-target');
+                targetOn = document.getElementById(target)
+                
+                targetOn.style.display = 'block';
+
+                setTimeout( function(){
+                    targetOn.classList.add('show');   
+                    
+                    if(targetOn.classList.contains('show')){
+                        document.onkeydown = function(evt) {
+                            evt = evt || window.event;
+                            if (evt.keyCode == 27) {
+                                targetOn.classList.remove('show');
+                                setTimeout( function() {  
+                                    targetOn.style.display = 'none'
+                                }, 500 ); 
+                            }
+                        };
+                    };
+                }, 100 ); 
+
+                return false;
+            });
+        };
+    }; 
+
+    document.body.addEventListener('click',function(e){
+
+        console.log(e.target); 
+
+        let dropmenu = document.querySelector('.dropmenu.show')
+        
+        if( !dropmenu ){ return }
+        
+        dropmenu.classList.remove('show')
+        setTimeout( function(){
+            dropmenu.style.display = 'none'
+        }, 300 ); 
+    })
+    
+    dropMenu(); 
+
+    let dropmenu = document.querySelectorAll('.dropmenu')
+
+    for(let i=0; i<dropmenu.length; i++){ 
+        dropmenu[i].addEventListener('click', function(e){
+            e.stopPropagation();
+        })
+    }
 }

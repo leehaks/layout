@@ -273,7 +273,7 @@ a.alarm-dot::before {
     flex-direction: column; 
     -ms-flex-direction: column; 
     min-width: 350px; 
-    height: 100%; 
+    /* height: 100%;  */
     box-shadow: 0px 0px 13px 0px rgba(82,63,105,0.1);
     border-radius: .225rem; 
     font-size: 1rem;
@@ -635,6 +635,7 @@ ul.tab-items a:hover  {
     position: absolute; 
     bottom: auto;  
     right: 0; 
+    top: 25px; 
     background: #fff; 
     min-width: 11.5rem; 
     margin-top: .5rem; 
@@ -642,8 +643,11 @@ ul.tab-items a:hover  {
     box-shadow: 0px 0px 50px 0px rgba(82,63,105,0.15); 
     border-radius: .25rem; 
     overflow: hidden; 
+    display: none; 
+    opacity: 0;
     font-size: 1rem; 
-    z-index: 10;
+    z-index: 100;
+    transition: all .25s ease-in-out;
 }
 
 .dropmenu .dropmenu-title span { 
@@ -675,6 +679,11 @@ ul.tab-items a:hover  {
 .dropmenu ul li:not(.dropmenu-title):hover a, 
 .dropmenu ul li:not(.dropmenu-title):hover i { color: #1650ba; }
 
+.dropmenu.show { 
+    opacity: 1;
+    top: 15px; 
+ }
+
 .ellipsis { position: relative; }
 
 .ellipsis, 
@@ -695,6 +704,7 @@ ul.tab-items a:hover  {
 }
 
 .ellipsis::after { left: 8px; }
+
 
 /* container */
 
@@ -973,20 +983,26 @@ table th span {
     display: flex; 
 }
 
-.slide-component .btn-arrow.left, 
-.slide-component .btn-arrow.right { 
+.slide-component .btn-arrow { 
     position: absolute; 
     top: 0; 
     bottom: 0; 
+    background: rgba(54,153,255,0.1); 
     min-width: 30px; 
     height: 30px; 
     padding: 0; 
     margin: auto; 
     z-index: 20;
+    color: #3699ff; 
 }
 
-.btn-arrow.left { left: 1.5rem; }
-.btn-arrow.right { right: 1.5rem; }
+.btn-arrow.left { left: 1rem; }
+.btn-arrow.right { right: 1rem; }
+
+.slide-component .btn-arrow:hover { 
+    background: #3699ff; 
+    color: #fff; 
+}
 
 .slide-component ul { 
     width: 100%; 

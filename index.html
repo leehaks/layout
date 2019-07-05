@@ -38,10 +38,10 @@
     
                 <nav class="flex flex-col flex1">
                     <ul>
-                        <li><a title="dashboard" data-menu="dashboard"><i class="fas fa-clipboard"></i></a></li>
-                        <li><a title="Graph" data-menu="Graph"><i class="fab fa-galactic-republic"></i></a></li>
-                        <li><a title="Data" data-menu="Data"><i class="fas fa-cubes"></i></a></li>
-                        <li><a title="User" data-menu="User"><i class="fas fa-user-circle"></i></a></li>
+                        <li><a class="no-link" data-target="dashboard" data-menu="dashboard"><i class="fas fa-clipboard"></i></a></li>
+                        <li><a title="Graph" data-target="graphSideContent"><i class="fab fa-galactic-republic"></i></a></li>
+                        <li><a title="Data" data-target="dataSideContent"><i class="fas fa-cubes"></i></a></li>
+                        <li><a title="User" data-target="userSideContent"><i class="fas fa-user-circle"></i></a></li>
                     </ul>
                     <ul class="mt-auto">
                         <li><a href="" title="Alarm" alt="Alarm"><i class="fas fa-bell"></i></a></li>
@@ -51,7 +51,7 @@
             </div>
             
             <aside>
-                <div class="side-component" id="dashboard">
+                <div class="side-component" id="graphSideContent">
                     <div class="side-header mb15">
                         
                         <div class="flex items-center justify-between mb10">
@@ -110,6 +110,14 @@
                         </nav>
                     </div>
                 </div>
+
+                <div class="side-component" id="datahSideContent">
+                    datasidecontent
+                </div>
+
+                <div class="side-component" id="userSideContent">
+                    usersidecontent
+                </div>
             </aside>
 
         </header>
@@ -122,8 +130,8 @@
                     <div class="btn-group">
                         <button class="btn-icon btn-sm"><i class="fas fa-search"></i></button>
                         <div class="relative ml5">
-                            <button class="btn-icon btn-sm"><i class="fas fa-exclamation-circle"></i></button>
-                            <div class="dropmenu">
+                            <button class="btn-icon btn-sm btn-drop" data-target="dropOne"><i class="fas fa-exclamation-circle"></i></button>
+                            <div id="dropOne" class="dropmenu">
                                 <ul>
                                     <li class="dropmenu-title">
                                         <span>documentation</span>
@@ -143,9 +151,6 @@
                         <button class="btn-icon btn-sm"><i class="fas fa-book"></i></button>
                     </div>
                 </div>
-
-                
-                    
                
                 <!-- <div class="container-content flex flex-col flex1 overflow-y-auto">
 
@@ -417,42 +422,44 @@
 
                     </div>
                     
-                </div> -->
-               
+                </div> -->               
 
-
-                <div class="container-content flex flex-col flex1 overflow-y-auto">
+                <div id="containerContent" class="container-content flex flex-col flex1 overflow-y-auto">
                     <div class="card p10">
                         <div>
                             <button class="btn-modal primary ripple" data-target="modalOne">on</button>
                         </div>
                     </div>
 
-                    <div class="card p10 mt15">
-                        <div id="slideOne" class="slide-component">
-
-                            <button class="btn-arrow left" data-target="slideOne"><i class="fas fa-chevron-left"></i></button>
-                            <button class="btn-arrow right" data-target="slideOne"><i class="fas fa-chevron-right"></i></button>
-
-                            <ul>
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                            </ul>
+                    <div class="flex flex1 mt15">
+                        <div class="card p10 flex1">
+                            <div id="slideOne" class="slide-component">
+    
+                                <button class="btn-arrow left" data-target="slideOne"><i class="fas fa-chevron-left"></i></button>
+                                <button class="btn-arrow right" data-target="slideOne"><i class="fas fa-chevron-right"></i></button>
+    
+                                <ul>
+                                    <li>
+                                        1
+                                    </li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="card p10 mt15">
-                        <div id="slideTwo" class="slide-component">
-
-                            <button class="btn-arrow left" data-target="slideTwo"><i class="fas fa-chevron-left"></i></button>
-                            <button class="btn-arrow right" data-target="slideTwo"><i class="fas fa-chevron-right"></i></button>
-
-                            <ul>
-                                <li>4</li>
-                                <li>5</li>
-                                <li>6</li>
-                            </ul>
+    
+                        <div class="card p10 ml15 flex1">
+                            <div id="slideTwo" class="slide-component">
+    
+                                <button class="btn-arrow left" data-target="slideTwo"><i class="fas fa-chevron-left"></i></button>
+                                <button class="btn-arrow right" data-target="slideTwo"><i class="fas fa-chevron-right"></i></button>
+    
+                                <ul>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li>6</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -480,6 +487,8 @@
                         </div>
                     </div>
                 </div>
+
+                <div data-link="container.html" class="page"></div>
 
                 <div class="container-footer flex items-center">
                     <div class="ml-auto mr5 flex items-center" style="font-size: 12px; color: #fff;">
