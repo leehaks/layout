@@ -11,492 +11,200 @@
 </head>
 <body>
     
-    <div id="wrap" class="flex">
-        <!-- <header class="flex justify-between border-b menu-inline">
-            <h1 class="logo flex items-center justify-center">
-                <img src="img/logo-2.png" alt="logo" title="bitnine" width="40px" />
-            </h1>
-            <ul class="menu flex">
-                <li><a href="">Dashboard</a></li>
-                <li><a href="">Graph</a></li>
-                <li><a href="">DataSource</a></li>
-                <li><a href="">Admin</a></li>
-                <li><a href="">Company</a></li>
-            </ul>
-            <ul class="menu menu-sm flex">
-                <li><a href=""><i class="fas fa-bell"></i></a></li>
-                <li><a href=""><i class="fas fa-user"></i></a></li>
-            </ul>
-        </header> -->
-
+    <div id="wrap" class="flex" data-align="vertical" >
         
-        <header class="fixed h-full">
-            <div class="header-menu flex flex-col h-full">
-                <h1 class="logo">
-                    <img src="img/logo-2.png" alt="logo" title="bitnine" />
-                </h1>
-    
-                <nav class="flex flex-col flex1">
-                    <ul>
-                        <li><a class="no-link" data-target="dashboard" data-menu="dashboard"><i class="fas fa-clipboard"></i></a></li>
-                        <li><a title="Graph" data-target="graphSideContent"><i class="fab fa-galactic-republic"></i></a></li>
-                        <li><a title="Data" data-target="dataSideContent"><i class="fas fa-cubes"></i></a></li>
-                        <li><a title="User" data-target="userSideContent"><i class="fas fa-user-circle"></i></a></li>
-                    </ul>
-                    <ul class="mt-auto">
-                        <li><a href="" title="Alarm" alt="Alarm"><i class="fas fa-bell"></i></a></li>
-                        <li><a href="" title="Setting" alt="Setting"><Wi class="fas fa-cog"></Wi></a></li>
-                    </ul>
-                </nav>
+        <!-- 
+            - Layout 구조변경
+            1. 가로형 : #wrap 태그 data-align="horizon" 추가 
+            2. 세로형 : #wrap 태그 data-align="vertical" 추가
+         -->
+
+        <header>
+
+            <!-- 
+                - header 내부구조 
+                1. header-main  ( logo/nav )
+                2. header-sub ( header/content/footer )
+             -->
+
+            <div class="header-main">
+                
+                <div class="logo"> 
+
+                    <!-- 
+                        Company logo 
+                    -->
+                    <h1>
+                        <img src="img/logo-2.png" alt='logo' />
+                    </h1>
+                </div>
+
+                <ul class="nav">
+                    <li>
+                        <a class="nav-link active" href="">
+                            <i class="far fa-chart-bar fa-lg"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="">
+                            <i class="fas fa-server fa-lg"></i>
+                            <span>DB Server</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="">
+                            <i class="fas fa-folder-open fa-lg"></i>
+                            <span>Data File</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="">
+                            <i class="fas fa-cubes fa-lg"></i>
+                            <span>Cube Center</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav nav-admin">
+                    <li>
+                        <a class="nav-link nav-icon" href="">
+                            <i class="fas fa-bell fa-lg"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link nav-icon" href="">
+                            <i class="fas fa-user-circle fa-lg"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link nav-icon" href="">
+                            <i class="fas fa-cog fa-lg"></i>
+                        </a>
+                    </li>
+                </ul>
+
             </div>
-            
-            <aside>
-                <div class="side-component" id="graphSideContent">
-                    <div class="side-header mb15">
-                        
-                        <div class="flex items-center justify-between mb10">
 
-                            <!-- 페이지 title 명 -->
-                            <h2> Dashboard </h2>
-        
-                            <span class="side-toggle-btn">
-                                <span><i class="fas fa-arrow-left"></i></span>
-                            </span>
-                        </div>
-                        
-                        <!-- title 간략내용 -->
-                        <small class="block">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor. 
-                        </small>
+            <div class="header-sub hidden">
+
+                <div class="header mb20">
+                    
+                    <div class="flex items-center mb10">
+
+                        <h3> Dashboard </h3>
+                        <button data-target="navSubMenuSide" class="btn-close arrow ml-auto"><i class="fas fa-arrow-left"></i></button>
                         
                     </div>
-                    <div class="side-content">
-                        <nav class="mb15">
-                            <ul>
-                                <li class="nav-title">
-                                    <span>Alarm</span>
-                                </li>
-                                <li>
-                                    <a href="" ><span>Notice</span> <i class="fas fa-chevron-right"></i></a>
-                                </li>
-                                <li>
-                                    <a href="" ><span>News</span> <i class="fas fa-chevron-right"></i></a>
-                                </li>
-                                <li>
-                                    <a href="" ><span>user</span> <i class="fas fa-chevron-right"></i></a>
-                                </li>
-                                <li>
-                                    <a href="" ><span>danger</span> <i class="fas fa-chevron-right"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
 
-                        <nav>
-                            <ul>
-                                <li class="nav-title">
-                                    <span>History</span>
-                                </li>
-                                <li>
-                                    <a href="" ><span>graph</span> <i class="fas fa-chevron-right"></i></a>
-                                </li>
-                                <li>
-                                    <a href="" ><span>chart</span> <i class="fas fa-chevron-right"></i></a>
-                                </li>
-                                <li>
-                                    <a href="" ><span>datatables</span> <i class="fas fa-chevron-right"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <div>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor. 
+                        </p>
+
                     </div>
+
                 </div>
 
-                <div class="side-component" id="datahSideContent">
-                    datasidecontent
-                </div>
+                <div class="content flex1">
+                    
+                    <div class="box">
+                        <ul class="nav">
+                            <li class="nav-title">
+                                <span>Alarm</span>
+                            </li>
+                            <li>
+                                <a href="" class="nav-link" ><span>Notice</span> <i class="fas fa-chevron-right fa-xs"></i></a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-link"><span>News</span> <i class="fas fa-chevron-right fa-xs"></i></a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-link"><span>user</span> <i class="fas fa-chevron-right fa-xs"></i></a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-link"><span>danger</span> <i class="fas fa-chevron-right fa-xs"></i></a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="side-component" id="userSideContent">
-                    usersidecontent
+                    <div class="box">
+                        <ul class="nav">
+                            <li class="nav-title">
+                                <span>History</span>
+                            </li>
+                            <li>
+                                <a href="" class="nav-link"><span>graph</span> <i class="fas fa-chevron-right fa-xs"></i></a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-link"><span>chart</span> <i class="fas fa-chevron-right fa-xs"></i></a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-link"><span>datatables</span> <i class="fas fa-chevron-right fa-xs"></i></a>
+                            </li>
+                        </ul>
+                    </div>  
+                    
+                    <div class="box">
+                        <ul class="nav">
+                            <li class="nav-title">
+                                <span>User</span>
+                            </li>
+                            <li>
+                                <a href="" class="nav-link"><span>admin</span> <i class="fas fa-chevron-right fa-xs"></i></a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-link"><span>setting</span> <i class="fas fa-chevron-right fa-xs"></i></a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-link"><span>data</span> <i class="fas fa-chevron-right fa-xs"></i></a>
+                            </li>
+                        </ul>
+                    </div>  
+
                 </div>
-            </aside>
+            </div>
 
         </header>
+
+        <!-- 
+            - main 2 Type 
+            1. 일반형 : 클래스 없음
+            2. 축소형 : main 태그 class="shrink" 추가시 header-sub 너비만큼 축소 
+         -->
         
-        <main class="flex1">
-            <section id="container" class="container flex flex-col h-full">
-                    
-                <div class="container-header flex justify-between items-center">
-                    <h2><span class="pr5"><i class="fas fa-home"></i></span> Dashboard <small class="ml2">Graphdata view board</small></h2>
-                    <div class="btn-group">
-                        <button class="btn-icon btn-sm"><i class="fas fa-search"></i></button>
-                        <div class="relative ml5">
-                            <button class="btn-icon btn-sm btn-drop" data-target="dropOne"><i class="fas fa-exclamation-circle"></i></button>
-                            <div id="dropOne" class="dropmenu">
-                                <ul>
-                                    <li class="dropmenu-title">
-                                        <span>documentation</span>
-                                    </li>
-                                    <li>
-                                        <a href="" title="Quick-guide documentation"><i class="far fa-file-alt"></i><span>Quick-guide</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="Developer documentation"><i class="far fa-file-alt"></i><span>Developer</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="Operations documentation"><i class="far fa-file-alt"></i><span>Operations</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <button class="btn-icon btn-sm"><i class="fas fa-book"></i></button>
-                    </div>
-                </div>
-               
-                <!-- <div class="container-content flex flex-col flex1 overflow-y-auto">
+        <main>
+            <!-- 
+                - main 내부구조 
+                1. container (header/content/footer)
+             -->
 
-                    <div class="flex mb10">
-
-                        <div class="card flex1">
-                            <div class="card-header">
-                                <h3>Notice board</h3>
-                                <div class="select ml-auto">
-                                    <span class="select-title">sort by : </span>
-                                    <select>
-                                        <option>All</option>
-                                        <option>Ours</option>
-                                        <option>Bitnine</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="card-content">
-                                <div>
-                                    <table>
-                                        <colgroup>
-                                            <col span="1" width="50" >
-                                            <col span="1" width="100">
-                                            <col span="1" width="*">
-                                            <col span="1" width="100">
-                                            <col span="1" width="120">
-                                        </colgroup>
-                                        <tr>
-                                            <th><span>No.</span></th>
-                                            <th><span>Company</span></th>
-                                            <th><span>Contents</span></th>
-                                            <th><span>User</span></th>
-                                            <th><span>Date</span></th>
-                                        </tr>
-                                        <tbody>
-                                            <tr>
-                                                <td><span>5</span></td>
-                                                <td><span>Bitnine</span></td>
-                                                <td><span>AgensGraph Update v.10.1.13</span></td>
-                                                <td><span>Admin</span></td>
-                                                <td><span>2019.06.24</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span>4</span></td>
-                                                <td><span>Ours</span></td>
-                                                <td><span>Resister Member</span></td>
-                                                <td><span>Admin</span></td>
-                                                <td><span>2019.06.24</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span>3</span></td>
-                                                <td><span>Bitnine</span></td>
-                                                <td><span>DB virus Alarm! Hurry Up!</span></td>
-                                                <td><span>Admin</span></td>
-                                                <td><span>2019.06.24</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span>2</span></td>
-                                                <td><span>Bitnine</span></td>
-                                                <td><span>DB virus Alarm! Hurry Up!</span></td>
-                                                <td><span>Admin</span></td>
-                                                <td><span>2019.06.24</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span>1</span></td>
-                                                <td><span>Bitnine</span></td>
-                                                <td><span>DB virus Alarm! Hurry Up!</span></td>
-                                                <td><span>Admin</span></td>
-                                                <td><span>2019.06.24</span></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="table-pager">
-                                        <ul>
-                                            <li><a href="" class="table-pager-arrow"><span><i class="fas fa-angle-double-left"></i></span></a></li>
-                                            <li><a href="" class="table-pager-arrow"><span><i class="fas fa-angle-left"></i></span></a></li>
-                                            <li></li>
-                                            <li><a href="" class="active"><span>1</span></a></li>
-                                            <li><a href=""><span>2</span></a></li>
-                                            <li><a href=""><span>3</span></a></li>
-                                            <li><a href=""><span>4</span></a></li>
-                                            <li><a href=""><span>5</span></a></li>
-                                            <li></li>
-                                            <li><a href="" class="table-pager-arrow"><span><i class="fas fa-angle-right"></i></span></a></li>
-                                            <li><a href="" class="table-pager-arrow"><span><i class="fas fa-angle-double-right"></i></span></a></li>
-                                        </ul>
-                                        <div>
-                                            <select><option>5</option></select>
-                                            <span>Showing 11 - 20 of 1000</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card card-padding ml10 flex1">
-                            <div class="card-header"><h3>Statistics</h3></div>
-                            <div class="card-content">
-                                <div class="slide-component">
-                                    <div class="slide-items">
-                                        <span class="slide-btn_left"></span>
-                                        <span class="slide-btn_right"></span>
-                                    </div>
-                                    <ul class="slide-panels">
-                                        <li id="slide_1" class="slide-panel active">1</li>
-                                        <li id="slide_2" class="slide-panel">2</li>
-                                        <li id="slide_3" class="slide-panel">3</li>
-                                    </ul>
-                                    <div class="slide-dot"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="flex flex1">
-                        <div class="flex flex1">
-                            <div class="card card-padding flex1">
-                                <div class="card-header border-b">
-                                    <h3>Data Visualization</h3>
-                                    <button class="btn-icon ml-auto">
-                                        <span class="ellipsis"></span>
-                                    </button>
-                                </div>
-                                <div class="card-content">
-                                    <div class="card-block">
-                                        <div class="tab-comoponent">
-                                            <ul class="tab-items flex item-linked">
-                                                <li><a data-tab="panel_1" class="active"><span>Graph</span></a></li> 
-                                                <li><a data-tab="panel_2"><span>Bubble</span></a></li> 
-                                                <li><a data-tab="panel_3"><span>Chart</span></a></li> 
-                                            </ul>
-                                            <div class="panels">
-                                                <div id="panel_1" class="panel off on">
-                                                    <p>Lorem Ipsum is simply dummy text of the printing </p>
-                                                </div>
-                                                <div id="panel_2" class="panel off">
-                                                    <p>typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                                                </div>
-                                                <div id="panel_3" class="panel off">
-                                                    <p>lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>    
-                        </div>
-
-                        <div class="flex flex1 ml10">
-                            
-                            <div class="card flex1">
-                                <div class="card-header border-b">
-                                    <h3>History</h3>
-                                    <button class="btn-icon ml-auto">
-                                        <span class="ellipsis"></span>
-                                    </button>
-                                </div>
-                                <div class="card-content p10 overflow-y-auto">
-                                    <div class="list-group h-full">
-                                        <a class="listitem flex flex-col">
-                                            <div class="listitem-title flex mb5">
-                                                <h4>AgensGraph Update with Our solution</h4>
-                                                <span class="ml-auto text-xs">1 days ago</span>
-                                            </div>
-                                            <p class="mb5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                            <ul class="listitem-sum flex text-xs">
-                                                <li>#AgensGraph</li>
-                                                <li>#Mammoth</li>
-                                                <li>#Hong</li>
-                                            </ul>
-                                        </a>
-                                        <a class="listitem flex flex-col">
-                                            <div class="listitem-title flex mb5">
-                                                <h4>AgensGraph Update with Our solution</h4>
-                                                <span class="ml-auto text-xs">1 days ago</span>
-                                            </div>
-                                            <p class="mb5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                            <ul class="listitem-sum flex text-xs">
-                                                <li>#AgensGraph</li>
-                                                <li>#Mammoth</li>
-                                                <li>#Hong</li>
-                                            </ul>
-                                        </a>
-                                        <a class="listitem flex flex-col">
-                                            <div class="listitem-title flex mb5">
-                                                <h4>AgensGraph Update with Our solution</h4>
-                                                <span class="ml-auto text-xs">2 days ago</span>
-                                            </div>
-                                            <p class="mb5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                            <ul class="listitem-sum flex text-xs">
-                                                <li>#AgensGraph</li>
-                                                <li>#Mammoth</li>
-                                                <li>#Hong</li>
-                                            </ul>
-                                        </a>
-                                        <a class="listitem flex flex-col">
-                                            <div class="listitem-title flex mb5">
-                                                <h4>AgensGraph Update with Our solution</h4>
-                                                <span class="ml-auto text-xs">2 days ago</span>
-                                            </div>
-                                            <p class="mb5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                            <ul class="listitem-sum flex text-xs">
-                                                <li>#AgensGraph</li>
-                                                <li>#Mammoth</li>
-                                                <li>#Hong</li>
-                                            </ul>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card-padding flex1 ml10">
-                                <div class="card-header border-b">
-                                    <h3>Alarm</h3>
-                                    <button class="btn-icon ml-auto">
-                                        <span class="ellipsis"></span>
-                                    </button>
-                                </div>
-                                <div class="card-content">
-                                    <div class="card-block">
-                                        <div class="timeline">
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-header">
-                                                    <span class="timeline-item-icon"></span>
-                                                    <span class="timeline-item-datetime">12:24 AM</span>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    <p class="timeline-item-text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                    <span class="timeline-item-subtext"></span>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-header">
-                                                    <span class="timeline-item-icon"></span>
-                                                    <span class="timeline-item-datetime">12:24 AM</span>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    <p class="timeline-item-text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                    <span class="timeline-item-subtext"></span>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-header">
-                                                    <span class="timeline-item-icon"></span>
-                                                    <span class="timeline-item-datetime">12:24 AM</span>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    <p class="timeline-item-text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                    <span class="timeline-item-subtext"></span>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-header">
-                                                    <span class="timeline-item-icon"></span>
-                                                    <span class="timeline-item-datetime">12:24 AM</span>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    <p class="timeline-item-text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                    <span class="timeline-item-subtext"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            
-                        </div>
-
-                    </div>
-                    
-                </div> -->               
-
-                <div id="containerContent" class="container-content flex flex-col flex1 overflow-y-auto">
-                    <div class="card p10">
-                        <div>
-                            <button class="btn-modal primary ripple" data-target="modalOne">on</button>
-                        </div>
-                    </div>
-
-                    <div class="flex flex1 mt15">
-                        <div class="card p10 flex1">
-                            <div id="slideOne" class="slide-component">
-    
-                                <button class="btn-arrow left" data-target="slideOne"><i class="fas fa-chevron-left"></i></button>
-                                <button class="btn-arrow right" data-target="slideOne"><i class="fas fa-chevron-right"></i></button>
-    
-                                <ul>
-                                    <li>
-                                        1
-                                    </li>
-                                    <li>2</li>
-                                    <li>3</li>
-                                </ul>
-                            </div>
-                        </div>
-    
-                        <div class="card p10 ml15 flex1">
-                            <div id="slideTwo" class="slide-component">
-    
-                                <button class="btn-arrow left" data-target="slideTwo"><i class="fas fa-chevron-left"></i></button>
-                                <button class="btn-arrow right" data-target="slideTwo"><i class="fas fa-chevron-right"></i></button>
-    
-                                <ul>
-                                    <li>4</li>
-                                    <li>5</li>
-                                    <li>6</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="modalOne" class="modal-component hide">
-                        <div class="modal-block">
-                            <div class="modal-box">
-                                <div class="modal-header border-b">
-                                    <h3 class="modal-title">
-                                        Modal title
-                                    </h3>
-                                    <button class="btn-modal-off btn-close ml-auto"></button>
-                                </div>
-                                <div class="modal-content">
-                                    <p>
-                                        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                                    </p>
-                                </div>
-                                <div class="modal-footer border-t">
-                                    <div class="btn-group ml-auto">
-                                        <button class="hover">OK</button>
-                                        <button class="btn-modal-off hover">close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-link="container.html" class="page"></div>
-
-                <div class="container-footer flex items-center">
-                    <div class="ml-auto mr5 flex items-center" style="font-size: 12px; color: #fff;">
-                        <i class="far fa-check-circle mr5"></i> Master
-                    </div>
-                </div>
+            <div class="container header">
                 
-            </section>
+            </div>                       
+
+            <div class="container content p15">
+                <div class="btn-group">
+                    <button>Agensgraph</button>
+                    <button class="primary">Agensgraph</button>
+                    <button class="warning">Agensgraph</button>
+                    <button class="danger">Agensgraph</button>
+                    <button class="disabled">Agensgraph</button>
+                </div>
+                <div class="btn-group">
+                    <button>Agensgraph</button>
+                    <button class="btn-border primary">Agensgraph</button>
+                    <button class="btn-border warning">Agensgraph</button>
+                    <button class="btn-border danger">Agensgraph</button>
+                </div>
+            </div>
+
+            <div class="container footer">
+
+            </div>
+            
         </main>
     </div>
 
