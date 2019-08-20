@@ -23,6 +23,8 @@ header .header-main {
     color: currentColor; 
 }
 
+header .header-main h1.logo { font-size: 100%; }
+
 header .header-sub { 
     position: absolute; 
     background: #fff; 
