@@ -182,3 +182,25 @@ button.ripple:active::after {
     opacity: .3;
     transition: 0s; 
 }
+
+
+/* card */
+
+.card { 
+    background: #fff; 
+    min-width: 250px; 
+    display: inline-flex; 
+    flex-direction: column; 
+    flex: 0 1 auto; 
+    border-radius: .325rem; 
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.125); 
+}
+
+.card .card-header { 
+    min-height: 40px; 
+    line-height: 40px; 
+    display: flex; 
+    align-content: center; 
+    padding: 0 1.25rem; 
+}
+

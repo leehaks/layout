@@ -69,3 +69,21 @@
     font-style: italic; 
     src: url(../font/OpenSans-Italic.ttf) format('truetype');
 }
+
+@font-face { 
+    font-family: NotoSans-regular; 
+    font-style: normal; 
+    src: url(../font/NotoSansKR-Regular.otf) fotmat('truetype'); 
+}
+
+@font-face { 
+    font-family: NotoSans-bold; 
+    font-style: normal; 
+    src: url(../font/NotoSansKR-Bold.otf) fotmat('truetype'); 
+}
+
+@font-face { 
+    font-family: NotoSans-light; 
+    font-style: normal; 
+    src: url(../font/NotoSansKR-Light.otf) fotmat('truetype'); 
+}
