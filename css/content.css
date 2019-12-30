@@ -1,199 +1,41 @@
-:root { 
-    --bg-main: #1a75ba; 
-    --header-size: 65px; 
-    --header-sub-size: 270px; 
-    --deep-gray: #676d8f;  
-    --smooth-gray: #90a6bb; 
+
+/* ========== */
+
+.header-main { 
+    width: inherit;  
+    height: inherit;     
+    display: flex; 
+    display: -ms-flexbox;  
 }
 
-
-/* =====
-header 
-===== */
-
-header { 
-    position: fixed; 
-    background: var(--bg-main); 
-    color: #fff; 
-    z-index: 1000; 
-}
-
-header .header-main { 
-    background: inherit; 
-    color: currentColor; 
-}
-
-header .header-main h1.logo { font-size: 100%; }
-
-header .header-sub { 
-    position: absolute; 
-    background: #fff; 
-    flex-direction: column; 
-    -ms-flex-direction: column; 
-    padding: 1.5rem; 
-    box-shadow: 0px 0px 28px 0px rgba(68,94,167,0.13);
-    color: var(--deep-gray); 
-}
-
-header .header-main, 
-header .header-sub {     
-    overflow-x: hidden; 
-    overflow-y: auto; 
-}
-
-header .header-main, 
-header .header-sub, 
-header .header-main div.logo, 
-header .header-main ul.nav { 
+.header-main div.logo { 
+    width: 200px;
+    min-width: 55px; 
+    height: 55px; 
     display: flex; 
     display: -ms-flexbox; 
-}
-
-header .header-main div.logo, 
-header .header-main ul.nav li a.nav-link { 
-    min-width: var(--header-size); 
-    height: var(--header-size); 
     align-items: center; 
     -ms-flex-align: center;
     justify-content: center; 
     -ms-flex-pack: center; 
+    letter-spacing: .05rem; 
+    font-size: 1rem; 
 }
 
-header .header-sub ul.nav li a.nav-link { 
-    min-width: var(--header-size); 
-    color: var(--smooth-gray); 
+/* ========== */
+
+.container.header { 
+    background: #fff;
+    padding: 1.5rem; 
 }
 
-/* F
-    ## 레이아웃 가로형
-    div#wrap data-style-align = horizon 추가  
-*/
-
-div#wrap[data-align="vertical"] header { width: 100%; }
-
-div#wrap[data-align="vertical"] header .header-main { 
-    width: inherit;  
-    height: var(--header-size);    
-}
-
-div#wrap[data-align="vertical"] header .header-sub {
-    width: inherit; 
-    /* height: var(--header-sub-size);   */
-    flex-direction: row; 
-    -ms-flex-direction: row; 
-    top: var(--header-size); 
-    left: 0;     
-}
-
-div#wrap[data-align="vertical"] header .header-sub div.content { 
-    display: flex; 
-    display: -ms-flexbox; 
-}
-
-/* 
-    ###### 레이아웃 가로형내부
-    ###### 임의수정가능부분
-*/
-
-div#wrap[data-align="vertical"] header .header-main div.logo { width: 12rem; }
-div#wrap[data-align="vertical"] header .header-main ul.nav:not(.nav-admin) li a.nav-link { min-width: 10rem; }
-div#wrap[data-align="vertical"] header .header-main ul.nav.nav-admin { margin-left: auto; }
-
-div#wrap[data-align="vertical"] header .header-sub div.header { 
-    max-width: 300px; 
-    display: flex; 
-    display: -ms-flexbox; 
-    flex-direction: column; 
-    -ms-flex-direction: column; 
-    justify-content: center; 
-    -ms-flex-pack: center; 
-}
-
-div#wrap[data-align="vertical"] header .header-sub div.content .box { 
-    min-width: 190px; 
-    margin-left: 2rem; 
-}
-
-/* 
-    ###### 레이아웃 세로형
-    ###### div#wrap data-style-align = vertical 추가 
-*/
-
-div#wrap[data-align="horizon"] header, 
-div#wrap[data-align="horizon"] header .header-main { height: 100%; }
-
-div#wrap[data-align="horizon"] header .header-main,
-div#wrap[data-align="horizon"] header .header-main ul { 
-    width: var(--header-size); 
-    flex-direction: column; 
-    -ms-flex-direction: column; 
-}
-
-div#wrap[data-align="horizon"] header .header-main div.logo { 
-    width: var(--header-size); 
-    height: calc( var(--header-size) * 1.5 );
-}
-
-div#wrap[data-align="horizon"] header .header-main ul.nav li a.nav-link {      
-    flex-direction: column; 
-    -ms-flex-direction: column; 
-}
-
-div#wrap[data-align="horizon"] header .header-sub { 
-    width: var(--header-sub-size); 
-    height: inherit; 
-    top: 0; 
-    left: var(--header-size); 
-}
-
-/* 
-    ###### 레이아웃 세로형내부
-    ###### 임의수정가능부분
-*/
-
-div#wrap[data-align="horizon"] header .header-main ul.nav.nav-admin { margin-top: auto; }
-div#wrap[data-align="horizon"] header .header-sub .content .box { margin-bottom: 2rem; }
-
-
-/* 
-    ###### 가로형, 세로형 
-    ###### 동일 값을 가진 공통 class 
-*/
-
-div#wrap[data-align="vertical"] header .header-main ul.nav a.nav-link:not(.nav-icon) i, 
-div#wrap[data-align="vertical"] header .header-sub div.header button, 
-div#wrap[data-align="horizon"] header .header-main ul.nav li a.nav-link span { display: none; }
-
-
-
-/*
-###### ===== 
-###### content 
-###### =====
-*/
-
-main { 
-    background: #eff2f9; 
-    width: inherit; 
-    height: auto; 
-    overflow: hidden;
-    display: flex; 
-    display: -ms-flexbox; 
-    flex: 
-}
-
-div#wrap[data-align="horizon"] main { padding-left: var(--header-size); }
-div#wrap[data-align="horizon"] main.shrink { 
-    padding-left: calc(var(--header-size) + var(--header-sub-size)) }
-
-div#wrap[data-align="vertical"] main { padding-top: var(--header-size); }
-div#wrap[data-align="vertical"] main.shrink { 
-    padding-top: calc(var(--header-size) + var(--header-sub-size)) }
-
-main div.container.content { 
+.container.content { 
     flex: 1; 
-    -ms-flex: 1 1 0; 
+    -ms-flex: 1 1 auto; 
 }
 
-
-
+.container.footer { 
+    margin: 0 1.5rem; 
+    border-top: 1px solid #d8d8d8; 
+    padding: 1rem 0; 
+}

@@ -6,18 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LAYOUT</title>
     <link rel="stylesheet" type="text/css" href="css/import.css">
-    <script src="js/component.js"></script>   
 </head>
 <body>
     
-    <div id="wrap" class="flex" data-align="horizon" >
+    <div id="wrap" class="flex" data-align="vertical">
         
-        <!-- 
-            - Layout 구조변경
-            1. 가로형 : #wrap 태그 data-align="horizon" 추가 
-            2. 세로형 : #wrap 태그 data-align="vertical" 추가
-         -->
-
         <header>
 
             <!-- 
@@ -33,193 +26,42 @@
                     <!-- 
                         Company logo 
                     -->
-                    <h1>
-                        <img src="img/logo-2.png" alt='logo' />
-                    </h1>
+
+                    <h1><strong>Bitnine UX/UI</strong></h1>
                 </div>
 
-                <ul class="nav">
-                    <li>
-                        <a class="nav-link active" href="">
-                            <i class="far fa-chart-bar fa-lg"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="">
-                            <i class="fas fa-server fa-lg"></i>
-                            <span>DB Server</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="">
-                            <i class="fas fa-folder-open fa-lg"></i>
-                            <span>Data File</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="">
-                            <i class="fas fa-cubes fa-lg"></i>
-                            <span>Cube Center</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <ul class="nav nav-admin">
-                    <li>
-                        <a class="nav-link nav-icon" href="">
-                            <i class="fas fa-bell fa-lg"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link nav-icon" href="">
-                            <i class="fas fa-user-circle fa-lg"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link nav-icon" href="">
-                            <i class="fas fa-cog fa-lg"></i>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-
-            <div class="header-sub hidden">
-
-                <div class="header mb20">
-                    
-                    <div class="flex items-center mb10">
-
-                        <h3> Dashboard </h3>
-                        <button data-target="navSubMenuSide" class="btn-close arrow ml-auto"><i class="fas fa-arrow-left"></i></button>
-                        
-                    </div>
-
-                    <div>
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor. 
-                        </p>
-
-                    </div>
-
+                <div class="sch-box">
+                    <input type="text" placeholder="SEARCH" />
+                    <input type="button" value="search" />
                 </div>
 
-                <div class="content flex1">
-                    
-                    <div class="box">
-                        <ul class="nav">
-                            <li class="nav-title">
-                                <span>Alarm</span>
-                            </li>
-                            <li>
-                                <a href="" class="nav-link" ><span>Notice</span> <i class="fas fa-chevron-right fa-xs"></i></a>
-                            </li>
-                            <li>
-                                <a href="" class="nav-link"><span>News</span> <i class="fas fa-chevron-right fa-xs"></i></a>
-                            </li>
-                            <li>
-                                <a href="" class="nav-link"><span>user</span> <i class="fas fa-chevron-right fa-xs"></i></a>
-                            </li>
-                            <li>
-                                <a href="" class="nav-link"><span>danger</span> <i class="fas fa-chevron-right fa-xs"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="box">
-                        <ul class="nav">
-                            <li class="nav-title">
-                                <span>History</span>
-                            </li>
-                            <li>
-                                <a href="" class="nav-link"><span>graph</span> <i class="fas fa-chevron-right fa-xs"></i></a>
-                            </li>
-                            <li>
-                                <a href="" class="nav-link"><span>chart</span> <i class="fas fa-chevron-right fa-xs"></i></a>
-                            </li>
-                            <li>
-                                <a href="" class="nav-link"><span>datatables</span> <i class="fas fa-chevron-right fa-xs"></i></a>
-                            </li>
-                        </ul>
-                    </div>  
-                    
-                    <div class="box">
-                        <ul class="nav">
-                            <li class="nav-title">
-                                <span>User</span>
-                            </li>
-                            <li>
-                                <a href="" class="nav-link"><span>admin</span> <i class="fas fa-chevron-right fa-xs"></i></a>
-                            </li>
-                            <li>
-                                <a href="" class="nav-link"><span>setting</span> <i class="fas fa-chevron-right fa-xs"></i></a>
-                            </li>
-                            <li>
-                                <a href="" class="nav-link"><span>data</span> <i class="fas fa-chevron-right fa-xs"></i></a>
-                            </li>
-                        </ul>
-                    </div>  
-
+                <div class="btn-group ml-auto mr-20">
+                    <button class="btn-icon"><i class="fab fa-twitter"></i></button>
+                    <button class="btn-icon"><i class="fab fa-github"></i></button>
+                    <button class="btn-icon"><i class="fab fa-facebook-f"></i></button>
+                    <button class="btn-icon"><i class="fab fa-stack-overflow"></i></button>
                 </div>
+
             </div>
 
         </header>
-
-        <!-- 
-            - main 2 Type 
-            1. 일반형 : 클래스 없음
-            2. 축소형 : main 태그 class="shrink" 추가시 header-sub 너비만큼 축소 
-         -->
         
         <main>
+
             <!-- 
-                - main 내부구조 
-                1. container (header/content/footer)
-             -->
+                nav-link 활성화는 nav-link active 클레스추가와 nav-sub on 클레스추가 필요함                
+                nav-link 에 맞는 container-wrap 에는 hidden 클레스 제거하면 페이지 활성화 
+            -->
+            <aside>
 
-            <div class="container header"></div>                       
+            </aside>
+            <div>
 
-            <div class="container content p15">
-                <div class="card">
-                    <div class="card-header border-b">
-                        <h2>
-                            사원휴가등록
-                            <small>휴가를 등록하세요</small>
-                        </h2>
-                    </div>
-                    <div class="card-content">
-                        <form>
-                            
-                        </form>
-                        <label>팀선택</label>
-                        <select>
-                            <option></option>
-                            <optgroup label="연구개발기술본부">
-                                <option>Tech센터</option>
-                                <option>R&D센터</option>
-                                <option>GI센터</option>
-                            </optgroup>
-                            <optgroup label="영업마케팅본부">
-                                <option>솔루션영업팀</option>
-                                <option>글로벌영업지원팀</option>
-                                <option>글로벌마케팅지원팀</option>
-                            </optgroup>
-                            <option>그래프디자인기획팀</option>
-                            <option>경영지원팀</option>
-                            <option>재무회계IR팀</option>
-                        </select>
-                    
-                    </div>
-                    <div class="card-footer"></div>
-                </div>
             </div>
-
-            <div class="container footer"></div>
+            
             
         </main>
+
     </div>
 
 </body>

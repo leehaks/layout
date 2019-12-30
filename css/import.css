@@ -1,8 +1,37 @@
-@import url("reset.css"); 
 @import url("common.css"); 
-@import url("component.css"); 
+@import url("layout.css"); 
 @import url("content.css"); 
+@import url("component.css"); 
+@import url("reset.css"); 
 @import url("all.min.css"); 
+
+@font-face { 
+    font-family: NanumSquare_acR;
+    font-style: normal;
+    src: url(../font/NanumSquare_acR.eot); 
+    src: url(../font/NanumSquare_acR.eot?#iefix) format('embedded-opentype'),   
+    url(../font/NanumSquare_acR.ttf) format('truetype'),    
+    url(../font/NanumSquare_acR.woff) format('woff'); 
+}
+
+@font-face { 
+    font-family: NanumSquare_acB;
+    font-style: normal;
+    src: url(../font/NanumSquare_acB.ttf) format('truetype'); 
+}
+
+@font-face { 
+    font-family: NanumSquare_acEB;
+    font-style: normal;
+    src: url(../font/NanumSquare_acEB.ttf) format('truetype'); 
+    font-weight: 700;
+}
+
+@font-face { 
+    font-family: NanumSquare_acL;
+    font-style: normal;
+    src: url(../font/NanumSquare_acL.ttf) format('truetype'); 
+}
 
 
 @font-face { 
@@ -53,7 +82,7 @@
 
 @font-face {
     font-family: Opensans-bold; 
-    font-style: normal;
+    /* font-style: normal; */
     src: url(../font/OpenSans-Bold.ttf) format('truetype');
 }
 

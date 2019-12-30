@@ -1,0 +1,36 @@
+/* ========== */
+
+header { 
+    background: #fff; 
+    width: inherit;
+    height: 55px; 
+    box-shadow: 0px 0px 28px 0px rgba(68,94,167,0.13);
+    position: fixed; 
+    top: 0; 
+    z-index: 100; 
+}
+
+/* ========== */
+
+main { 
+    width: inherit; 
+    height: 100%; 
+    overflow: hidden;
+    display: flex; 
+    display: -ms-flexbox; 
+    padding-left: 200px;
+    padding-top: 55px;
+}
+
+/* ========== */
+
+aside { 
+    background: #fff; 
+    position: fixed;
+    left: 0; 
+    width: 200px; 
+    height: 100%; 
+    overflow: hidden; 
+    z-index: 10;
+}
+
