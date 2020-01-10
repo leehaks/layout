@@ -1,0 +1,167 @@
+
+
+    <ul class="nav mb-10">
+        <li class="nav-tit">
+            <h3>Layout</h3>
+        </li>
+        <li>
+            <a href="#">Container</a>
+        </li>
+        <li>
+            <a href="#">Display</a>
+        </li>
+        <li>
+            <a href="#">Overflow</a>
+        </li>
+        <li>
+            <a href="#">Position</a>
+        </li>
+        <li>
+            <a href="#">Z-index</a>
+        </li>
+    </ul>
+    
+    <ul class="nav mb-10">
+        <li class="nav-tit">
+            <h3>Flex</h3>
+        </li>
+        <li>
+            <a href="#">Flex</a>
+        </li>
+        <li>
+            <a href="#">Align</a>
+        </li>
+        <li>
+            <a href="#">Justify</a>
+        </li>               
+        <li>
+            <a href="#">Grow</a>
+        </li>  
+        <li>
+            <a href="#">Shrink</a>
+        </li>  
+        <li>
+            <a href="#">Wrap</a>
+        </li>    
+    </ul>
+    
+    <ul class="nav mb-10">
+        <li class="nav-tit">
+            <h3>Spacing</h3>
+        </li>
+        <li>
+            <a href="#">Width / Height</a>
+        </li>
+        <li>
+            <a href="#">Padding</a>
+        </li>
+        <li>
+            <a href="#">Margin</a>
+        </li>               
+    </ul>
+    
+    <ul class="nav mb-10">
+        <li class="nav-tit">
+            <h3>Effect</h3>
+        </li>
+        <li>
+            <a href="#">Opacity</a>
+        </li>
+        <li>
+            <a href="#">Box shadow</a>
+        </li>
+        <li>
+            <a href="#">Cursor</a>
+        </li>    
+        <li>
+            <a href="#">User select</a>
+        </li>             
+    </ul>
+    
+    <ul class="nav mb-10">
+        <li class="nav-tit">
+            <h3>Components</h3>
+        </li>
+        <li>
+            <a href="#card">Cards</a>
+        </li>
+        <li>
+            <a href="#button">Buttons</a>
+        </li>
+        <li>
+            <a href="#form">Forms</a>
+        </li>
+        <li>
+            <a href="#graph">Graph</a>
+        </li>
+        <li>
+            <a href="#table">Table</a>
+        </li>
+    </ul>
+    
+    <!--  -->
+    
+    <ul class="nav mb-10">
+        <li class="nav-tit">
+            <h3>Font</h3>
+        </li>
+        <li>
+            <a href="#fontsize">Font size</a>
+        </li>
+        <li>
+            <a href="#fontstyle">Font style</a>
+        </li>
+        <li>
+            <a href="#textalign">Text align</a>
+        </li>
+        <li>
+            <a href="#texttransform">Text transform</a>
+        </li>
+        <li>
+            <a href="#textdecoration">Text decoration</a>
+        </li>
+        <li>
+            <a href="whitespace">White space</a>
+        </li>
+    </ul>
+    
+    <ul class="nav">
+        <li class="nav-tit">
+            <h3>Border</h3>
+        </li>
+        <li>
+            <a href="#">Border style</a>
+        </li>
+        <li>
+            <a href="#">Border width</a>
+        </li>
+        <li>
+            <a href="#">Border radius</a>
+        </li>                   
+    </ul>
+
+
+
+
+<script type="text/javascript">
+
+    var currentMenu; 
+    var linkItem = document.querySelectorAll('ul.nav li a'); 
+
+    function clickNavHandler() { 
+        if(currentMenu){
+            currentMenu.classList.remove('active');
+        }
+        
+        var a = this.getAttribute('href').replace("#","");        
+        $('#content').load("../html/"+ a +".html")
+        
+        this.classList.add('active'); 
+        currentMenu = this; 
+    }
+
+    for(var i=0; i<linkItem.length; i++) { 
+        linkItem[i].addEventListener('click', clickNavHandler)
+    }
+
+</script>

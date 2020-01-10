@@ -4,80 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LAYOUT</title>
+    <title>LAYOUT</title>    
     <link rel="stylesheet" type="text/css" href="css/import.css">
 </head>
 <body>
     
     <div id="wrap" class="flex" data-align="vertical">
         
-        <header>
-
-            <!-- 
-                - header 내부구조 
-                1. header-main  ( logo/nav )
-                2. header-sub ( header/content/footer )
-             -->
-
-            <div class="header-main">
-                
-                <div class="logo"> 
-
-                    <!-- 
-                        Company logo 
-                    -->
-
-                    <h1><strong>Bitnine UX/UI</strong></h1>
-                </div>
-
-                <div class="sch-box lg ml-20">
-                    <form>
-                        <input type="text" placeholder="SEARCH" />
-                        <input type="button" value="search" />
-                    </form>
-                </div>
-
-                <div class="btn-group ml-auto mr-20">
-                    <button class="btn-icon"><i class="fab fa-twitter"></i></button>
-                    <button class="btn-icon"><i class="fab fa-github"></i></button>
-                    <button class="btn-icon"><i class="fab fa-facebook-f"></i></button>
-                    <button class="btn-icon"><i class="fab fa-stack-overflow"></i></button>
-                </div>
-
-            </div>
-
-        </header>
+        <header></header>
         
         <main>
 
-            <!-- 
-                nav-link 활성화는 nav-link active 클레스추가와 nav-sub on 클레스추가 필요함                
-                nav-link 에 맞는 container-wrap 에는 hidden 클레스 제거하면 페이지 활성화 
-            -->
-            <aside>
-                <ul class="nav">
-                    <li>
-                        <a href="">cards</a>
-                    </li>
-                    <li>
-                        <a href="">Buttons</a>
-                    </li>
-                    <li>
-                        <a href="">Forms</a>
-                    </li>
-                    <li>
-                        <a href="">Graph</a>
-                    </li>
-                </ul>
-            </aside>
-            <div>
-
-            </div>
-            
+            <div id="sidebar"></div>
+            <div id="content"></div>
             
         </main>
-
     </div>
-
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/component.js"></script>
+    <script type="text/javascript" src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

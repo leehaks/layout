@@ -24,13 +24,20 @@ main {
 
 /* ========== */
 
-aside { 
+#sidebar { 
     background: #fff; 
     position: fixed;
     left: 0; 
     width: 200px; 
-    height: 100%; 
-    overflow: hidden; 
+    height: calc(100% - 55px); 
+    padding: 1rem !important; 
+    overflow-y: auto;
     z-index: 10;
+}
+
+#content { 
+    width: 100%; 
+    padding: 1rem; 
+    overflow: auto;
 }
 

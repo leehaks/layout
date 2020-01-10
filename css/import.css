@@ -1,9 +1,10 @@
-@import url("common.css"); 
+@import url("all.min.css"); 
+@import url("reset.css"); 
 @import url("layout.css"); 
 @import url("content.css"); 
 @import url("component.css"); 
-@import url("reset.css"); 
-@import url("all.min.css"); 
+@import url("common.css"); 
+@import url("github-gist.css"); 
 
 @font-face { 
     font-family: NanumSquare_acR;
