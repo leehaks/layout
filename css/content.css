@@ -16,8 +16,10 @@
     display: -ms-flexbox; 
     align-items: center; 
     -ms-flex-align: center;
-    justify-content: center; 
-    -ms-flex-pack: center; 
+    /* justify-content: center; 
+    -ms-flex-pack: center;  */
+    padding-left: 1rem; 
+    border-left: 3px solid transparent;  
     letter-spacing: .05rem; 
     font-size: 1rem; 
 }

@@ -1,7 +1,6 @@
 /* ========== */
 
 header { 
-    background: #fff; 
     width: inherit;
     height: 55px; 
     box-shadow: 0px 0px 28px 0px rgba(68,94,167,0.13);
@@ -18,7 +17,7 @@ main {
     overflow: hidden;
     display: flex; 
     display: -ms-flexbox; 
-    padding-left: 200px;
+    padding-left: 250px;
     padding-top: 55px;
 }
 
@@ -28,16 +27,16 @@ main {
     background: #fff; 
     position: fixed;
     left: 0; 
-    width: 200px; 
+    width: 250px; 
     height: calc(100% - 55px); 
-    padding: 1rem !important; 
+    padding: 1rem 0; 
+    
     overflow-y: auto;
     z-index: 10;
 }
 
 #content { 
     width: 100%; 
-    padding: 1rem; 
-    overflow: auto;
+    height: 100%; 
 }
 
