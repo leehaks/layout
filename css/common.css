@@ -176,6 +176,12 @@
 .overflow-hidden { overflow: hidden; }
 .overflow-auto { overflow: auto; }
 
+/* list-style */
+
+ul.list-disc { list-style-type: disc; }
+ul.list-square { list-style-type: square; }
+ul.list-inside { list-style-position: inside; }
+
 /* img 값 */
 
 img { max-width: 100%; }
@@ -196,8 +202,17 @@ img { max-width: 100%; }
 .w-full { width: 100%; }
 .h-full { height: 100%; }
 
+.w-100 { min-width: 100px; }
 .w-200 { min-width: 200px; }
 .w-300 { min-width: 300px; }
+.w-400 { min-width: 400px; }
+.w-500 { min-width: 500px; }
+
+.h-100 { min-height: 100px; }
+.h-200 { min-height: 200px; }
+.h-300 { min-height: 300px; }
+.h-400 { min-height: 400px; }
+.h-500 { min-height: 500px; }
 
 /* border */
 
@@ -218,20 +233,29 @@ img { max-width: 100%; }
 
 /* text */
 
-.text-xl { font-size: 1.5rem; }
+.text-xl { 
+    line-height: 2.2rem;
+    font-size: 1.5rem; 
+}
 
-.text-lg { font-size: 1.35rem; }
+.text-lg { 
+    line-height: 1.9rem;
+    font-size: 1.35rem; 
+}
 
 .text-sm { 
     line-height: 1.4rem; 
     font-size: .85rem; 
 }
 
-.text-xs { font-size: .65rem; }
+.text-xs { 
+    line-height: 1rem; 
+    font-size: .65rem; 
+}
+
 
 .text-ellipsis { 
     display: inline-block; 
-    width: 290px; 
     white-space: nowrap; 
     text-overflow: ellipsis; 
     overflow: hidden; 
