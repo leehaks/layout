@@ -240,10 +240,7 @@ button.ripple:active::after {
 .card { 
     background: #fff; 
     width: 100%; 
-    min-width: 350px; 
-    /* border: 1px solid #d6d7db;  */
-    /* border-radius: .525rem;  */
-    /* box-shadow: 0 0 10px 1px rgba(210, 210, 210, 0.15);  */
+    min-width: 350px; l
 }
 
 .card .card-header { 
@@ -406,4 +403,25 @@ table td {
     letter-spacing: -.05rem;
     font-size: .925rem; 
     color: rgb(63, 70, 85); 
+}
+
+/* anchor-box */
+
+.anchor-box { 
+    border-top: 5px solid #5136d3; 
+    border-radius: .325rem; 
+}
+
+.anchor-box .nav-tit { 
+    margin-bottom: .5rem; 
+}
+
+.anchor-box h3 { 
+    padding-bottom: .5em; 
+}
+
+.anchor-box a { 
+    display: inline-block; 
+    padding: .4em 0; 
+    font-size: .9rem; 
 }

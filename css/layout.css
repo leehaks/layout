@@ -3,17 +3,19 @@
 header { 
     width: inherit;
     height: 55px; 
-    box-shadow: 0px 0px 28px 0px rgba(68,94,167,0.13);
     position: fixed; 
     top: 0; 
     z-index: 100; 
+    box-shadow: 0px 0px 28px 0px rgba(68,94,167,0.13);
 }
 
 /* ========== */
 
 main { 
+    background: #fff; 
     width: inherit; 
     height: 100%; 
+    position: relative;
     overflow: hidden;
     display: flex; 
     display: -ms-flexbox; 
@@ -25,18 +27,32 @@ main {
 
 #sidebar { 
     background: #fff; 
-    position: fixed;
-    left: 0; 
     width: 250px; 
     height: calc(100% - 55px); 
-    padding: 1rem 0; 
-    
+    position: fixed;
+    left: 0; 
+    padding: 1rem 0;    
     overflow-y: auto;
     z-index: 10;
 }
 
 #content { 
     width: 100%; 
-    height: 100%; 
+    height: 100%;     
 }
 
+#anchor { 
+    background: #fff; 
+    width: 200px; 
+    position: absolute; 
+    right: 2rem; 
+    top: calc(2rem + 55px); /* 원하는 위치 + main padding-top 수치 */ 
+    padding: 1em; 
+    box-shadow: 0 0 3px rgba(0,0,0,0.25);
+}
+
+/* special-box */
+
+.special-box { 
+    padding-right: 235px; 
+}
